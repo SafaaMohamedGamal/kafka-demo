@@ -1,5 +1,5 @@
 ## Kafka-Demo Application
-
+Kafka Docs can be found [here](https://docs.spring.io/spring-kafka/reference/index.html)
 ### installation
 to install kafka in your docker environment run:
 1. cd docker-compose
