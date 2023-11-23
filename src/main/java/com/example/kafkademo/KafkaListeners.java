@@ -13,6 +13,6 @@ public class KafkaListeners {
 
     @KafkaListener(topics = "demoTopic", groupId = "groupID")
     void listener(String data){
-        logger.log(Level.INFO, "Listener received : {} :smile:", data);
+        logger.log(Level.INFO, "Listener received : {0} \uD83D\uDE04", data);
     }
 }
