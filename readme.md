@@ -11,3 +11,5 @@ to install kafka in your docker environment run:
 ### Notes
 1. to send a message to a topic, we need a producerFactory
 2. we send the message using kafkaTemplate
+3. to receive or consume a message, we need a DefaultConsumerFactory
+4. we use @KafkaListener to consume the messages
