@@ -9,6 +9,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 @SpringBootApplication
 public class KafkaDemoApplication {
 
+	private static final String PARTITION = "2";
 	public static void main(String[] args) {
 		SpringApplication.run(KafkaDemoApplication.class, args);
 	}
@@ -17,7 +18,7 @@ public class KafkaDemoApplication {
 	CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate){
 		return args -> {
 			for (int i = 0; i < 100 ; i++) {
-				kafkaTemplate.send("demoTopic", "Hello Kafka!!  " + i);
+				kafkaTemplate.send("demoTopic", PARTITION, "Hello Kafka!!  " + i);
 			}
 		};
 	}
