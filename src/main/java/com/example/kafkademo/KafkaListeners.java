@@ -11,7 +11,7 @@ public class KafkaListeners {
 
     Logger logger = Logger.getLogger(getClass().getName());
 
-    @KafkaListener(topics = "demoTopic", groupId = "groupID")
+    @KafkaListener(topics = "demoTopic", groupId = "customGroup")
     void listener(String data){
         logger.log(Level.INFO, "Listener received : {0} \uD83D\uDE04", data);
     }
